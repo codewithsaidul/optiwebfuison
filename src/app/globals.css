@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================== Navbar ====================== */
+
+/* for desktop */
+.before__effect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #1d5d9b;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease-in-out;
+}
+
+.darkbefore__effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #75C2F6;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease-in-out;
+}
+
+.before__effect:hover::before {
+  width: 80%;
+}
+.darkbefore__effect:hover::after {
+  width: 80%;
+}
+
+.before__effect.active::before {
+  width: 80%;
+}
+.darkbefore__effect.active::after {
+  width: 80%;
+}
+
+/* for mobile */
+.after__effect::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 0%;
+  background-color: #1d5d9b;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+
+.after__effect:hover::after {
+  height: 100%;
+}
+
+
+.after__effect.active::after {
+  height: 100%;
+}
+
+.textCollor {
+  color: #1d5d9b !important;
+}
+
+
+/* ==================== Home Banner Section Image Animation */
+.img__animation {
+  animation: bounce-slow 5s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.img__animation2 {
+  animation: bounce-slow2 5s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes bounce-slow2 {
+  0%,
+  100% {
+    transform: translatex(-10px);
+  }
+  50% {
+    transform: translatex(10px);
+  }
+}
+
+/* ==================== Home Comming Soon Section ====================== */
+.animate-run {
+  animation: run 5s linear infinite;
+}
+
+
+
+
+@keyframes run {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .animate-run {
+    animation: run 5s linear infinite;
+  }
+
+  @keyframes run {
+    0% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .animate-run {
+    animation: run 5s linear infinite;
+  }
+
+  @keyframes run {
+    0% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .animate-run {
+    animation: run 5s linear infinite;
+  }
+
+  @keyframes run {
+    0% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+    100% {
+      transform: translateX(-2px);
+    }
+  }
+}
+
+
+/*  Services Page */
+
+.services__before::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #1d5d9b; */
+  top: 0;
+  left: 0;
+  border-top: 2px solid #1d5d9b;
+  border-left: 2px solid #1d5d9b;
+}
+
