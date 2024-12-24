@@ -1,8 +1,14 @@
+"use client"
+
 import Sidebar from "@/component/Dashboard/Sidebar";
+import { useState } from "react";
 
 
 
 export default function DashboardLayout({ children }) {
+
+  const [open, setOpen] = useState(false);
+
   return (
     <html lang="en">
       <head>
@@ -12,8 +18,8 @@ export default function DashboardLayout({ children }) {
 
       <body className={`font-montserrat dark:bg-gray-900 bg-white`}>
         <div className="flex">
-          <Sidebar />
-          <main>{children}</main>
+          <Sidebar open={open} setOpen={setOpen} />
+          <main className={`w-full flex-1 ${open && "w-[80%]"}`}>{children}</main>
         </div>
         
       </body>

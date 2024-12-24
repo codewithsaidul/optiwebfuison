@@ -1,8 +1,10 @@
-import React from 'react'
+import Overview from './overview/Overview'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <Overview />
+    </div>
   )
 }
 

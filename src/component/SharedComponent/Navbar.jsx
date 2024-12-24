@@ -75,6 +75,9 @@ const Navbar = () => {
     },
   ];
 
+
+  if (path === "/dashboard") return null;
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-20 shadow-md dark:bg-gray-900 bg-white`}
